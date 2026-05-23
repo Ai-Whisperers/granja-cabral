@@ -1,3 +1,6 @@
+import CookieConsent from "@/components/CookieConsent"
+import WhatsAppButton from "@/components/WhatsAppButton"
+import JsonLd from "@/components/JsonLd"
 import type { Metadata } from 'next'
 import './globals.css'
 
@@ -10,7 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body>{children}</body>
+      <body>{children}        <JsonLd />
+        <WhatsAppButton phone="+595982911935" />
+              <CookieConsent />
+      </body>
     </html>
   )
 }
